@@ -1,0 +1,230 @@
+{
+  "usuarios": [
+      {
+        "correo" : "cbacigalupo@inteligogroup.com",
+        "name": "BACIGALUPO CASTILLO, CLAUDIA CECILIA",
+        "dni": "07866149",
+        "puesto": "GERENTE DE ALTO PATRIMONIO",
+        "departamento": "",
+        "division": "G.ALTO PATRIMONIO",
+        "indicadorvp": "VP.COMERCIAL"
+      },
+      {
+        "correo" : "mlerzundi@inteligogroup.com",
+        "name": "LERZUNDI ESCUDERO, MARITE",
+        "dni": "07950333",
+        "puesto": "SUB-GERENTE",
+        "departamento": "",
+        "division": "G.ALTO PATRIMONIO",
+        "indicadorvp": "VP.COMERCIAL"
+      },
+      {
+        "correo" : "uverme@inteligogroup.com",
+        "name": "VERME VILLARAN, URSULA GLADYS",
+        "dni": "09397785",
+        "puesto": "SUB-GERENTE",
+        "departamento": "",
+        "division": "G.ALTO PATRIMONIO",
+        "indicadorvp": "VP.COMERCIAL"
+      },
+      {
+        "correo" : "pallen@inteligogroup.com",
+        "name": "ALLEN CIEZA, PEGGY LUISA",
+        "dni": "09489214",
+        "puesto": "ASESOR FINANCIERO",
+        "departamento": "SUB G.COMERCIAL 1",
+        "division": "G.COMERCIAL",
+        "indicadorvp": "VP.COMERCIAL"
+      },
+      {
+        "correo" : "gramirez@inteligogroup.com",
+        "name": "RAMIREZ CABRERA, GUSTAVO ALEJANDRO",
+        "dni": "09537142",
+        "puesto": "SUB GERENTE",
+        "departamento": "SUB G.COMERCIAL 1",
+        "division": "G.COMERCIAL",
+        "indicadorvp": "VP.COMERCIAL"
+      },
+      {
+        "correo" : "fcarrera@inteligogroup.com",
+        "name": "CARRERA PERBULI, FERNANDO OMAR",
+        "dni": "10586283",
+        "puesto": "ASESOR FINANCIERO",
+        "departamento": "SUB G.COMERCIAL 2",
+        "division": "G.COMERCIAL",
+        "indicadorvp": "VP.COMERCIAL"
+      },
+      {
+        "correo" : "acastillo@inteligogroup.com",
+        "name": "CASTILLO MATA, ADRIAN ELIAS",
+        "dni": "08168720",
+        "puesto": "ASESOR FINANCIERO",
+        "departamento": "SUB G.COMERCIAL 2",
+        "division": "G.COMERCIAL",
+        "indicadorvp": "VP.COMERCIAL"
+      },
+      {
+        "correo" : "migranda@inteligogroup.com",
+        "name": "GRANDA NEGGLI, MARIA ISABEL",
+        "dni": "40069285",
+        "puesto": "ASESOR FINANCIERO",
+        "departamento": "SUB G.COMERCIAL 2",
+        "division": "G.COMERCIAL",
+        "indicadorvp": "VP.COMERCIAL"
+      },
+      {
+        "correo" : "asarria@inteligogroup.com",
+        "name": "SARRIA SOTILLO, ALVARO CARLOS",
+        "dni": "40022936",
+        "puesto": "ASESOR FINANCIERO",
+        "departamento": "SUB G.COMERCIAL 2",
+        "division": "G.COMERCIAL",
+        "indicadorvp": "VP.COMERCIAL"
+      },
+      {
+        "correo" : "cvargascorbacho@inteligogroup.com",
+        "name": "VARGAS-CORBACHO VELARDE, CONSTANZA",
+        "dni": "45901766",
+        "puesto": "ASESOR FINANCIERO",
+        "departamento": "SUB G.COMERCIAL 2",
+        "division": "G.COMERCIAL",
+        "indicadorvp": "VP.COMERCIAL"
+      },
+      {
+        "correo" : "cpalacios@inteligogroup.com",
+        "name": "PALACIOS PAZOS, CARLOS ALBERTO",
+        "dni": "10609593",
+        "puesto": "SUB GERENTE",
+        "departamento": "SUB G.COMERCIAL 2",
+        "division": "G.COMERCIAL",
+        "indicadorvp": "VP.COMERCIAL"
+      },
+      {
+        "correo" : "fbriceno@inteligogroup.com",
+        "name": "BRICEÑO BATTISTINI, FERNANDA MARIA",
+        "dni": "10269553",
+        "puesto": "ASESOR FINANCIERO",
+        "departamento": "SUB G.COMERCIAL 3",
+        "division": "G.COMERCIAL",
+        "indicadorvp": "VP.COMERCIAL"
+      },
+      {
+        "correo" : "rcortes@inteligogroup.com",
+        "name": "CORTES RUBIO, ROSA AUGUSTA",
+        "dni": "02820568",
+        "puesto": "ASESOR FINANCIERO",
+        "departamento": "SUB G.COMERCIAL 3",
+        "division": "G.COMERCIAL",
+        "indicadorvp": "VP.COMERCIAL"
+      },
+      {
+        "correo" : "vlabarthe@inteligogroup.com",
+        "name": "LABARTHE FERREYROS, VERONICA",
+        "dni": "41469225",
+        "puesto": "ASESOR FINANCIERO",
+        "departamento": "SUB G.COMERCIAL 3",
+        "division": "G.COMERCIAL",
+        "indicadorvp": "VP.COMERCIAL"
+      },
+      {
+        "correo" : "gpardo@inteligogroup.com",
+        "name": "PARDO PACHECO, GIANNINA LISETH",
+        "dni": "10812881",
+        "puesto": "ASESOR FINANCIERO",
+        "departamento": "SUB G.COMERCIAL 3",
+        "division": "G.COMERCIAL",
+        "indicadorvp": "VP.COMERCIAL"
+      },
+      {
+        "correo" : "ttakamoto@inteligogroup.com",
+        "name": "TAKAMOTO KAWAHARA, TATIANA MICHIKO",
+        "dni": "16682586",
+        "puesto": "ASESOR FINANCIERO",
+        "departamento": "SUB G.COMERCIAL 3",
+        "division": "G.COMERCIAL",
+        "indicadorvp": "VP.COMERCIAL"
+      },
+      {
+        "correo" : "avalderrama@inteligogroup.com",
+        "name": "VALDERRAMA BACIGALUPO, JOSE ALBERTO",
+        "dni": "07869602",
+        "puesto": "ASESOR FINANCIERO",
+        "departamento": "SUB G.COMERCIAL 3",
+        "division": "G.COMERCIAL",
+        "indicadorvp": "VP.COMERCIAL"
+      },
+      {
+        "correo" : "afarje@inteligogroup.com",
+        "name": "FARJE GORDON, ANTONIO ALEJANDRO",
+        "dni": "41006977",
+        "puesto": "SUB GERENTE",
+        "departamento": "SUB G.COMERCIAL 3",
+        "division": "G.COMERCIAL",
+        "indicadorvp": "VP.COMERCIAL"
+      },
+      {
+        "correo" : "aaguilar@inteligogroup.com",
+        "name": "AGUILAR RAMIREZ, ABSALON JESÚS",
+        "dni": "40618514",
+        "puesto": "ASESOR FINANCIERO",
+        "departamento": "SUB G.COMERCIAL 4",
+        "division": "G.COMERCIAL",
+        "indicadorvp": "VP.COMERCIAL"
+      },
+      {
+        "correo" : "rdelsolar@inteligogroup.com",
+        "name": "DEL SOLAR BERCKEMEYER, ROCIO ISMENA",
+        "dni": "06363569",
+        "puesto": "ASESOR FINANCIERO",
+        "departamento": "SUB G.COMERCIAL 4",
+        "division": "G.COMERCIAL",
+        "indicadorvp": "VP.COMERCIAL"
+      },
+      {
+        "correo" : "vamoreno@inteligogroup.com",
+        "name": "MORENO SALAVERRY, VANESSA",
+        "dni": "07879982",
+        "puesto": "ASESOR FINANCIERO",
+        "departamento": "SUB G.COMERCIAL 4",
+        "division": "G.COMERCIAL",
+        "indicadorvp": "VP.COMERCIAL"
+      },
+      {
+        "correo" : "orivera@inteligogroup.com",
+        "name": "RIVERA AVALOS, OSCAR ALFREDO",
+        "dni": "29683711",
+        "puesto": "ASESOR FINANCIERO",
+        "departamento": "SUB G.COMERCIAL 4",
+        "division": "G.COMERCIAL",
+        "indicadorvp": "VP.COMERCIAL"
+      },
+      {
+        "correo" : "etagle@inteligogroup.com",
+        "name": "TAGLE BERNAL, EDUARDO ANTONIO",
+        "dni": "16683080",
+        "puesto": "ASESOR FINANCIERO",
+        "departamento": "SUB G.COMERCIAL 4",
+        "division": "G.COMERCIAL",
+        "indicadorvp": "VP.COMERCIAL"
+      },
+      {
+        "correo" : "rteran@inteligogroup.com",
+        "name": "TERAN SANGUINETTI, RENZO LUIS",
+        "dni": "25681246",
+        "puesto": "SUB GERENTE",
+        "departamento": "SUB G.COMERCIAL 4",
+        "division": "G.COMERCIAL",
+        "indicadorvp": "VP.COMERCIAL"
+      },
+      {
+        "correo" : "rbarciae@inteligogroup.com",
+        "name": "BARCIA ESTRELLA, RAUL",
+        "dni": "07874506",
+        "puesto": "VICE-PRESIDENTE COMERCIAL",
+        "departamento": "",
+        "division": "G.COMERCIAL",
+        "indicadorvp": "VP.COMERCIAL"
+      }
+    ]
+  
+}
