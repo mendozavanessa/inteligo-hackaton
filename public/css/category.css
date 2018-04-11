@@ -1,0 +1,33 @@
+.circle-topics {
+  border: 1px solid black;
+  height: 115px;
+  border-radius: 100%;
+  width: 100%;
+  background-color: silver; 
+  margin-bottom: 15px;
+}
+
+.top h4{
+  display: inline;
+  color: #233e99;
+}
+
+.all-circle {
+  margin-top: 20%;
+}
+
+.circle-topics p {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 40%;
+}
+
+body nav {
+  background-color: white;
+}
+
+body i {
+  color: #233e99;
+}
+
+
