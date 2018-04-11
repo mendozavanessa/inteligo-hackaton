@@ -1,6 +1,12 @@
-main {
-  background:url(../assets/images/fondo-2.jpg) no-repeat center center;
+body {
+  background:url(../assets/images/fondo-2.jpg) no-repeat;
   background-size: cover;
+  width: 100%;
+  height: 100vh;
+  background-position: bottom;
+}
+nav {
+  background-color: white;
 }
 .background-profile{
   background-color: #224099;
@@ -13,4 +19,22 @@ img[alt="profile"]{
 section img {
   width: 100%;
 }
-
+.list {
+  background-color: rgba(128, 128, 128, 0.582);
+}
+.list li:active {
+  background-color: white;
+}
+.list a {
+  margin-right: 1em;
+  background-color: #224099;
+}
+main {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.nav-wrapper a {
+  color: #224099;
+}
