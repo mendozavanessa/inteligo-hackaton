@@ -8,11 +8,42 @@
   <link rel="stylesheet" href="vendors/materialize/css/materialize.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-  <h1>Bienvenidas a INTELIGO</h1>
-  
+<body class="vh-100 center-align">
+  <div class="">
+    <div class="row center-align logo-login">
+      <div class="row logo-login ">
+        <img src="assets/images/login.png" alt="logo" class="responsive-img">
+      </div>
+    </div>
+    <div class="row white login">
+      <div class="input-field  offset-s1 col s10">
+        <input id="email" type="email" class="validate">
+        <label for="email">Correo electrónico corporativo</label>
+      </div>
+      <div class="input-field  offset-s1 col s10">
+        <input id="password" type="password" class="validate">
+        <label for="password">Contraseña</label>
+      </div>
+    </div>
+    <div class="row center-align">
+      <button class="btn waves-effect indigo darken-4" type="submit" id="login" name="action">Ingresar</button>
+    </div>
+  </div>
   <script src="vendors/jquery/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
   <script src="vendors/materialize/js/materialize.min.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyByPzXvMEw34UbhPkEKSuAO3TTssAlPApc",
+      authDomain: "inteligo-reto.firebaseapp.com",
+      databaseURL: "https://inteligo-reto.firebaseio.com",
+      projectId: "inteligo-reto",
+      storageBucket: "inteligo-reto.appspot.com",
+      messagingSenderId: "615168773810"
+    };
+    firebase.initializeApp(config);
+  </script>
   <script src="js/app.js"></script>
 </body>
 </html>
