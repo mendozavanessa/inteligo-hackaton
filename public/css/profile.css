@@ -1,0 +1,8 @@
+.background-profile{
+  background-color: #224099;
+  color: white;
+}
+img[alt="profile"]{
+  height: 20vh;
+  margin-top: 1rem;
+}
