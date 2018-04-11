@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $('#login').on('click', function() {
     var email = $('#email').val();
-    var password= $('#password').val();
+    var password = $('#password').val();
     firebase.auth().signInWithEmailAndPassword(email, password)
       .then(function() {
         $(location).attr('href', 'view-3.html');
@@ -15,6 +15,11 @@ $(document).ready(function() {
         console.log(errorMessage);
         // ...
       });
+  });
+
+
+  $(document).ready(function() {
+    $('.sidenav').sidenav();
   });
 });
   
