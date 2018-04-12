@@ -1,19 +1,12 @@
-  $(document).ready(function() {
-    var database = firebase.database();
-    $('.sidenav').sidenav();
-    $('.likes').click(function() {
-      window.location.href = 'topics.html';
-    });
-    firebase.auth().onAuthStateChanged(function(user) {
-      if (user) {
-        $('#email-profile').text(user.email)
-       
+$(document).ready(function() {
+  var database = firebase.database();
+   $('.sidenav').sidenav();
+   firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      $('#email-profile').text(user.email)
+    } else {
      
-      } else {
-       
-      }
-    });
-  
+    }
   });
   console.log(data);
   console.log(Object.keys(data));
@@ -28,3 +21,5 @@
     window.location.href = 'topics.html';
   });
 });
+ 
+
