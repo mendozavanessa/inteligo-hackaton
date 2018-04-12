@@ -29,21 +29,21 @@ function addNews2() {
     let title = article[i].title;
     let description = article[i].description;
     let imagen = article[i].urlToImage;
-    let news = `    
-    <div class="row">
-    <div class="col s12 m6">
+    let news = `
 
-      <div class="card">
+    <div class="col s12 m4 flex">
+
+      <div class="card card1">
         <div class="card-image">
-          <img src=${imagen}>
-          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">keyboard_arrow_right</i></a>
+          <img src=${imagen} class="img-search">
+          <a class="btn-floating halfway-fab waves-effect waves-light blue-btn"><i class="material-icons">keyboard_arrow_right</i></a>
         </div>
         <div class="card-content">
           <span class="card-title">${title}</span>
         </div>
       </div>
     </div>
-  </div>`;
+`;
 
     /* `<div class="row">
     <div class="col s12 m7">
@@ -90,19 +90,19 @@ function addNews3() {
     let title1 = article1[i].title;
     let description1 = article1[i].description;
     let imagen1 = article1[i].urlToImage;
-    let news1 = ` <div class="row">
-    <div class="col s12 m6">
-      <div class="card">
+    let news1 = `
+    <div class="col s12 m4 flex">
+      <div class="card card1">
         <div class="card-image">
-          <img src=${imagen1}>
-          <a class="btn-floating halfway-fab waves-effect waves-light red arrow" id="${i}"><i class="material-icons">keyboard_arrow_right</i></a>
+          <img src=${imagen1} class="img-search">
+          <a class="btn-floating halfway-fab waves-effect waves-light blue-btn arrow" id="${i}"><i class="material-icons">keyboard_arrow_right</i></a>
         </div>
         <div class="card-content">
         <span class="card-title">${title1}</span>
         </div>
       </div>
     </div>
-  </div>`;
+  `;
 
 
     $('#response-container').prepend(news1);
@@ -130,4 +130,3 @@ function addNews3() {
     }
   });
 }); */
-
