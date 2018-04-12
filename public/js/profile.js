@@ -1,13 +1,13 @@
 $(document).ready(function() {
   var database = firebase.database();
-   $('.sidenav').sidenav();
-   firebase.auth().onAuthStateChanged(function(user) {
+  $('.sidenav').sidenav();
+  firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-      $('#email-profile').text(user.email)
+      $('#email-profile').text(user.email);
       var showPost = firebase.database().ref('usuarios');
-        showPost.on('child_added', function(data) {
-            if(data.val().uid === user.uid){
-          $('#name-profile').text(data.val().name)
+      showPost.on('child_added', function(data) {
+        if (data.val().uid === user.uid) {
+          $('#name-profile').text(data.val().name);
         }
       });
     } else {

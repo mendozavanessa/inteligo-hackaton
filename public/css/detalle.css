@@ -59,3 +59,19 @@ body .nav-wrapper div.input-field {
   width: 45vw;
   height: 30vh;
 }
+
+.blue-btn{
+  background-color: #224099 !important;
+}
+
+@media (min-width: 992px){
+  .img-search{
+    width: 30vw;
+  }
+  .card1{
+    height: 350px;
+  }
+  .icon-search{
+    display: inline;
+  }
+}

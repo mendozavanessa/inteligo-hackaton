@@ -1,5 +1,19 @@
-$(document).ready(function() {
+$(document).ready(function () {
+  var database = firebase.database();
   $('.sidenav').sidenav();
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      $('#email-profile').text(user.email);
+      var showPost = firebase.database().ref('usuarios');
+      showPost.on('child_added', function(data) {
+        if (data.val().uid === user.uid) {
+          $('#name-profile').text(data.val().name);
+        }
+      });
+    } else {
+     
+    }
+  });
   
   console.log(data['Gustos y Preferencias']);
   console.log(Object.keys(data['Gustos y Preferencias'].Topico));
