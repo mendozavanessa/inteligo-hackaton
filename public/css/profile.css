@@ -21,9 +21,11 @@ section img {
 }
 .list {
   background-color: rgba(128, 128, 128, 0.582);
+  color: white;
 }
 .list li:active {
   background-color: white;
+  color: black;
 }
 .list a {
   margin-right: 1em;
