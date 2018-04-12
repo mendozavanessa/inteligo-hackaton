@@ -1,6 +1,12 @@
 $(document).ready(function() {
-  $(document).ready(function() {
-    $('.sidenav').sidenav();
+  var database = firebase.database();
+   $('.sidenav').sidenav();
+   firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      $('#email-profile').text(user.email)
+    } else {
+     
+    }
   });
   console.log(data);
   console.log(Object.keys(data));
@@ -15,3 +21,5 @@ $(document).ready(function() {
     window.location.href = 'topics.html';
   });
 });
+ 
+

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="vendors/materialize/css/materialize.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body class="vh-100 center-align">
   <div class="">
     <div class="row center-align logo-login">
@@ -26,7 +28,29 @@
       </div>
     </div>
     <div class="row center-align">
-      <button class="btn waves-effect indigo darken-4" type="submit" id="login" name="action">Ingresar</button>
+      <a class="btn waves-effect indigo darken-4 modal-trigger" href="#modal1" type="submit" id="login" name="action">Ingresar</a>
+    </div>
+  </div>
+  <div id="modal1" class="modal  center-align">
+    <div class="modal-content center-align">
+      <h6 class="indigo-text text-darken-4">
+        <strong>Cambia tu contraseña</strong>
+      </h6>
+      <p class="black-text text-black">Por ser tu primer accseso es necesario cambiar la contraseña</p>
+      <div class="input-field  offset-s1 col s10 grey lighten-2">
+        <input id="password1" type="password" class="validate center-align" placeholder="Ingrese la contraseña actual">
+      </div>
+      <div class="input-field  offset-s1 col s10 grey lighten-2">
+        <input id="password2" type="password" class="validate center-align" placeholder="Ingrese la nueva contraseña">
+      </div>
+      <div class="input-field  offset-s1 col s10 grey lighten-2">
+        <input id="password3" type="password" class="validate center-align" placeholder="Confirme la nueva contraseña">
+      </div>
+    </div>
+    <div class="modal-footer center-align">
+      <div class="col-s12 center-align ">
+        <a href="#!" id="ok" class="btn center-align modal-action modal-close waves-effect indigo darken-4 ">Hecho</a>
+      </div>
     </div>
   </div>
   <script src="vendors/jquery/jquery-3.2.1.slim.min.js"></script>
@@ -45,5 +69,23 @@
     firebase.initializeApp(config);
   </script>
   <script src="js/app.js"></script>
+  <script>
+      window['_fs_debug'] = false;
+      window['_fs_host'] = 'fullstory.com';
+      window['_fs_org'] = 'BJ8V5';
+      window['_fs_namespace'] = 'FS';
+      (function(m,n,e,t,l,o,g,y){
+          if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+          g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+          o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+          y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+          g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+          y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
+          y="consent";g[y]=function(a){g(y,!arguments.length||a)};
+          g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+          g.clearUserCookie=function(){};
+      })(window,document,window['_fs_namespace'],'script','user');
+      </script>
 </body>
+
 </html>

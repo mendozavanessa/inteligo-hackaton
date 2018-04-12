@@ -28,14 +28,13 @@ $(document).ready(function () {
       window.location.href = 'category.html';
     }
     console.log(arrayCategory);
-  })
-  console.log(data['Gustos y Preferencias'].Topico[localStorage.topics][1].categoria);
-  var arrayCat = data['Gustos y Preferencias'].Topico[localStorage.topics][0].categoria
+  });
+  // console.log(data['Gustos y Preferencias'].Topico[localStorage.topics][1].categoria);
+  var arrayCat = data['Gustos y Preferencias'].Topico[localStorage.topics][0].categoria;
   var arrVacioCategory = [];
   for (var i = 0; i < data['Gustos y Preferencias'].Topico[localStorage.topics].length; i++) {
     console.log(data['Gustos y Preferencias'].Topico[localStorage.topics][i].categoria);
     arrVacioCategory.push(data['Gustos y Preferencias'].Topico[localStorage.topics][i].categoria);
-
   }
   console.log(arrVacioCategory);
   var mappedItemsCategory = arrVacioCategory.map(function(element, index) {
@@ -48,5 +47,48 @@ $(document).ready(function () {
     console.log($(this).attr('id'));
     var categorys = $(this).attr('id');
     localStorage.categorys = categorys;
-});
+    window.location.href = 'detalle.html';
+    getNews3();
+  });
+  function handleError1() {
+    console.log('Se ha presentado un error');
+  }
+  function getNews3() {
+    console.log('hola clau y meli');
+    const articleRequest = new XMLHttpRequest();
+    articleRequest.open('GET', 'https://newsapi.org/v2/everything?q=golf&sources=cnn-es&apiKey=5bc8597ff85946f48100561b36f359b6');
+    articleRequest.onload = addNews3;
+    articleRequest.onerror = handleError1;
+    articleRequest.send();
+  }
+  function addNews3() {
+    let data1 = JSON.parse(this.responseText);
+    console.log(data1);
+    let article1 = data1.articles;
+    console.log(article1);
+    for (var i = 0; i < article1.length; i++) {
+      let title1 = article1[i].title;
+      let description1 = article1[i].description;
+      let imagen1 = article1[i].urlToImage;
+      let news1 = `<div class="row">
+    <div class="col s12 m7">
+    <div class="card">
+ <div class="card-image waves-effect waves-block waves-light">
+   <img class="activator" src=${imagen1}>
+ </div>
+ <div class="card-content">
+   <span class="card-title activator grey-text text-darken-4">${title1}<i class="material-icons right">more_vert</i></span>
+   <p><a href="#">This is a link</a></p>
+ </div>
+ <div class="card-reveal">
+   <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+   <p>${description1}</p>
+ </div>
+</div>
+    </div>
+  </div>`;
+
+      $('#container-details').append(news1);
+    }
+  }
 });

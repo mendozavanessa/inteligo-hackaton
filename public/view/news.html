@@ -38,7 +38,6 @@
       </ul>
     </div>
   </nav>
-
   <ul class="sidenav" id="mobile-demo">
     <div class="row background-profile">
       <div class="col s6">
@@ -84,20 +83,24 @@
         <i class="material-icons">local_grocery_store</i>Purchases</a>
     </li>
   </ul>
-
-  <div class="top col s12">
-    <a href="profile.html">  <i class="material-icons">chevron_left</i></a>
-
-    <h4>Tópicos</h4>
-  </div>
-  <div>
-    <ul class="list-topics"></ul>
-  </div>
+  <section class="news-container">
+  </section>
+  <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="5"></div>
 
   <script src="../vendors/jquery/jquery-3.2.1.slim.min.js"></script>
   <script src="../vendors/materialize/js/materialize.min.js"></script>
-  <script src="../js/topics.js"></script>
   <script src="../js/data.js"></script>
+  <script src="../js/topics.js"></script>
+  <script src="../js/detalle.js"></script>
+  <script src="../js/news.js"></script>
 </body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.12';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 </html>
