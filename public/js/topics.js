@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $('.sidenav').sidenav();
+  
   console.log(data['Gustos y Preferencias']);
   console.log(Object.keys(data['Gustos y Preferencias'].Topico));
   var arrTopics = Object.keys(data['Gustos y Preferencias'].Topico);
