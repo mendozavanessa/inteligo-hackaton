@@ -1,4 +1,4 @@
-body {
+.fondo-2 {
   background:url(../assets/images/fondo-2.jpg) no-repeat;
   background-size: cover;
   width: 100%;
@@ -21,9 +21,11 @@ section img {
 }
 .list {
   background-color: rgba(128, 128, 128, 0.582);
+  color: white;
 }
 .list li:active {
   background-color: white;
+  color: black;
 }
 .list a {
   margin-right: 1em;

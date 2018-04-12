@@ -1,0 +1,61 @@
+.top h4{
+  display: inline;
+  color: #233e99;
+}
+
+body nav {
+  background-color: white;
+}
+
+body i {
+  color: #233e99;
+}
+
+body.row .all-circle .s12 {
+  margin-left: 14px;
+}
+
+.top h4 {
+  margin-left: 35%;
+}
+
+body .top {
+  margin-top: 10px;
+}
+
+body .nav-wrapper div.input-field {
+  margin-left: 10px;
+}
+
+.detalle h5 {
+  text-align: center;
+  font-weight: 700;
+}
+
+.detalle .content-detalle {
+  text-align: center;
+}
+
+.imagen-detalle {
+  background-image: url('../assets/images/golf.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 170px;
+}
+
+.detalle {
+  margin-top: 60px;
+}
+
+.detalle-icons {
+  text-align: center;
+}
+
+.detalle-icons i {
+  display: inline-block;
+}
+
+.img-search{
+  width: 45vw;
+  height: 30vh;
+}

@@ -8,7 +8,7 @@
   <title>Inteligo</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
-  <link rel="stylesheet" href="../css/topics.css">
+  <link rel="stylesheet" href="../css/detalle.css">
   <link rel="stylesheet" href="../css/profile.css">
 </head>
 
@@ -18,9 +18,9 @@
       <a href="#" data-target="mobile-demo" class="sidenav-trigger">
         <i class="material-icons">menu</i>
       </a>
-      <div id="search" class="input-field col s6">
-        <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-      </div>
+      <form class="input-field col s6 m3" id="search-form">
+        <input placeholder="Busca la noticia que quier" id="search-keyword" type="text" class="validate">
+      </form>
       <i class="material-icons">search</i>
       <ul class="right hide-on-med-and-down">
         <li>
@@ -84,20 +84,33 @@
         <i class="material-icons">local_grocery_store</i>Purchases</a>
     </li>
   </ul>
-
-  <div class="top col s12">
-    <a href="profile.html">  <i class="material-icons">chevron_left</i></a>
-
-    <h4>Tópicos</h4>
+  <div class="row">
+    <div class="top col s12">
+      <a href="category.html">  <i class="material-icons">chevron_left</i></a>
+      <h4 class="">Golf</h4>
+    </div>
   </div>
-  <div>
-    <ul class="list-topics"></ul>
-  </div>
-
+  <section id="response-container">
+  </section>
   <script src="../vendors/jquery/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
   <script src="../vendors/materialize/js/materialize.min.js"></script>
-  <script src="../js/topics.js"></script>
-  <script src="../js/data.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyByPzXvMEw34UbhPkEKSuAO3TTssAlPApc",
+      authDomain: "inteligo-reto.firebaseapp.com",
+      databaseURL: "https://inteligo-reto.firebaseio.com",
+      projectId: "inteligo-reto",
+      storageBucket: "inteligo-reto.appspot.com",
+      messagingSenderId: "615168773810"
+    };
+    firebase.initializeApp(config);
+  </script>
+   <script src="../js/data.js"></script>
+  <script src="../js/detalle.js"></script>
+   <script src="../js/topics.js"></script>
+
 </body>
 
 </html>
