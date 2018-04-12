@@ -54,3 +54,8 @@ body .nav-wrapper div.input-field {
 .detalle-icons i {
   display: inline-block;
 }
+
+.img-search{
+  width: 45vw;
+  height: 30vh;
+}
