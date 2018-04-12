@@ -1,7 +1,7 @@
 .circle-topics {
   border: 1px solid black;
   height: 140px;
-  background-color: silver; 
+  background-color: silver;
   margin-bottom: 15px;
   border-radius: 5px;
   margin-left: 1.4em!important;
@@ -22,7 +22,9 @@
   margin-top: 20%;
 }
 
-
+a{
+  color: #233e99 !important;
+}
 body nav {
   background-color: white;
 }
@@ -46,4 +48,3 @@ body.row .all-circle .s12 {
 body .nav-wrapper div.input-field {
   margin-left: 10px;
 }
-

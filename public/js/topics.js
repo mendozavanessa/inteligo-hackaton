@@ -11,10 +11,10 @@ $(document).ready(function () {
         }
       });
     } else {
-     
+
     }
   });
-  
+
   console.log(data['Gustos y Preferencias']);
   console.log(Object.keys(data['Gustos y Preferencias'].Topico));
   var arrTopics = Object.keys(data['Gustos y Preferencias'].Topico);
@@ -103,7 +103,7 @@ $(document).ready(function () {
     </div>
   </div>`;
 
-      $('#container-details').append(news1);
+      $('#container-details').prepend(news1);
     }
   }
 });

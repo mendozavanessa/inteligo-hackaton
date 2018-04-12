@@ -82,8 +82,11 @@ $(document).ready(function() {
 
   $('.postext').on('click', function () {
     var $content = $('#textarea1').val();
+    var time=moment().format('LTS')
+    console.log(time);
     firebase.database().ref('coments').push({
-      textpost: $content
+      textpost: $content,
+      time:time
     });
 
 
@@ -94,7 +97,27 @@ $(document).ready(function() {
   var showComents = firebase.database().ref('coments');
   showComents.on('child_added', function(data) {
     console.log(data.val().textpost);
-      $('.content-text').prepend('  <div class="">'+data.val().textpost+'</div>')
+      $('.content-text').prepend(`<div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s2">
+              <img src="../assets/images/profile.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+            </div>
+            <div class="col s10">
+              <span class="black-text">
+              ${data.val().textpost}
+              </span>
+              <br>
+              <span class="black-text">
+              ${data.val().time }
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>`)
+
+
+      /*'  <div class="">'+data.val().textpost+'</div>'*/
   });
 
 });
