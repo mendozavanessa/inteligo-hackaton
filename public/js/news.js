@@ -19,22 +19,43 @@ $(document).ready(function() {
     let title2 = article1[localStorage.idNoticia].title;
     let description2 = article1[localStorage.idNoticia].description;
     let imagenNews = article1[localStorage.idNoticia].urlToImage;
-    let news2 = `<div class="col s12 m7">
-    <span class="header">${title2}</span>
+    let url = article1[localStorage.idNoticia].url;
+    let news2 = `<div class="row">
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+        <h5 class="center-align">${title2}</h5>
+          <img src=${imagenNews}>
+        </div>
+        <div class="card-content">
+          <p >${description2}</p>
+        </div>
+        <div class="card-action">
+          <a href=${url} target="_blank">Ver más</a>
+        </div>
+      </div>
+    </div>
+  </div>`
+
+    /* `<div class="col s12 m7">
+
     <div class="card horizontal">
       <div class="card-image">
         <img src="${imagenNews}">
       </div>
       <div class="card-stacked">
         <div class="card-content">
+        <h6 class="header">${title2}</h6>
           <p class="descriptionNews">${description2}</p>
         </div>
+
         <div class="card-action">
           <a class="linkNews" href="#">This is a link</a>
         </div>
       </div>
     </div>
-  </div>`;
+  </div>`;*/
     $('.news-container').append(news2);
   };
+
 });
