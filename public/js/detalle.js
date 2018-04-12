@@ -69,11 +69,12 @@ function addNews3() {
   let data1 = JSON.parse(this.responseText);
   console.log(data1);
   let article1 = data1.articles;
-  console.log(article1);
+  console.log(article1[0]);
   for (var i = 0; i < article1.length; i++) {
     let title1 = article1[i].title;
     let description1 = article1[i].description;
     let imagen1 = article1[i].urlToImage;
+    console.log(i);
     let news1 = `<div class="row">
   <div class="col s12 m7">
   <div class="card">
@@ -82,7 +83,7 @@ function addNews3() {
 </div>
 <div class="card-content">
  <span class="card-title activator grey-text text-darken-4">${title1}<i class="material-icons right">more_vert</i></span>
- <p><a href="#">This is a link</a></p>
+ <p><a class="arrow" id="${i}">ir a noticia</a></p>
 </div>
 <div class="card-reveal">
  <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
@@ -94,9 +95,14 @@ function addNews3() {
 
     $('#response-container').prepend(news1);
   }
+  $('.arrow').on('click', function() {
+    console.log($(this).attr('id'));
+    localStorage.idNoticia = $(this).attr('id');
+    window.location.href = 'news.html';
+  });
 }
 
-$('.postext').on('click', function() {
+/* $('.postext').on('click', function() {
   var $content = $('#textarea1').val();
   $('.content-text').append('<div class="col l10 offset-l1 posteando card flow-text s12">' + $content + '<br><br><span class="grey-text">Publicado a las :' + getTime() + '</span><br><a href="#!" class="secondary-content like"><i id="heart" class="material-icons">favorite_border</i></a></div>');
   $('#test4').append('<div class="col l10 offset-l1 posteando card flow-text s12">' + $content + '<br><br><span class="grey-text">Publicado a las :' + getTime() + '</span><br><a href="#!" class="secondary-content like"><i id="heart" class="material-icons">favorite_border</i></a></div>');
@@ -111,4 +117,5 @@ $('.postext').on('click', function() {
       });
     }
   });
-});
+}); */
+
