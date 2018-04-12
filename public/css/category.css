@@ -1,9 +1,10 @@
 .circle-topics {
   border: 1px solid black;
-  height: 115px;
+  height: 130px;
   width: 100%;
   background-color: silver; 
   margin-bottom: 15px;
+  border-radius: 5px;
 }
 
 .top h4{
@@ -27,6 +28,22 @@ body nav {
 
 body i {
   color: #233e99;
+}
+
+body.row .all-circle .s12 {
+  margin-left: 14px;
+}
+
+.top h4 {
+  margin-left: 22%;
+}
+
+body .top {
+  margin-top: 10px;
+}
+
+body .nav-wrapper div.input-field {
+  margin-left: 10px;
 }
 
 
