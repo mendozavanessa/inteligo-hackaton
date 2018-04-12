@@ -1,6 +1,18 @@
 $(document).ready(function() {
-  $(document).ready(function() {
-    $('.sidenav').sidenav();
+  var database = firebase.database();
+   $('.sidenav').sidenav();
+   firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      $('#email-profile').text(user.email)
+      var showPost = firebase.database().ref('usuarios');
+        showPost.on('child_added', function(data) {
+            if(data.val().uid === user.uid){
+          $('#name-profile').text(data.val().name)
+        }
+      });
+    } else {
+     
+    }
   });
   console.log(data);
   console.log(Object.keys(data));
@@ -15,3 +27,5 @@ $(document).ready(function() {
     window.location.href = 'topics.html';
   });
 });
+ 
+
