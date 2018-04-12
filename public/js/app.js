@@ -5,10 +5,8 @@ $(document).ready(function () {
     var password = $('#password').val();
     firebase.auth().signInWithEmailAndPassword(email, password)
       .then(function () {
-        // $('#ok').on('click', function () {
-        //   $(location).attr('href', '../view/profile.html');
-        //   $('.perfil').attr('src', '../assets/images/foto1.jpg');
-        // })
+          $(location).attr('href', '../view/profile.html');
+          $('.perfil').attr('src', '../assets/images/foto1.jpg');
       })
       .catch(function (error) {
         alert('Ingrese correo y contraseña valido ');
@@ -51,35 +49,35 @@ $(document).ready(function () {
     });
   }
 
-  let cambio = false;
-  let pass1, pass2, pass3 = false;
-  firebase.auth().onAuthStateChanged(function (user) {
-    if (user) {
-      debugger
-      $('.modal').modal();
-      console.log('usuario activo aa');
+  // let cambio = false;
+  // let pass1, pass2, pass3 = false;
+  // firebase.auth().onAuthStateChanged(function (user) {
+  //   if (user) {
+  //     debugger
+  //     $('.modal').modal();
+  //     console.log('usuario activo aa');
 
-      if ($('#password1') == '123456') {
-        pass1 = true;
-      }
-      if (($('#password2').val).length > 5) {
-        pass2 = true;
-      }
-      if ($('#password3').val == $('#password2').val) {
-        pass3 = true;
-      }
+  //     if ($('#password1') == '123456') {
+  //       pass1 = true;
+  //     }
+  //     if (($('#password2').val).length > 5) {
+  //       pass2 = true;
+  //     }
+  //     if ($('#password3').val == $('#password2').val) {
+  //       pass3 = true;
+  //     }
 
-      if (pass1 && pass2 && pass3) {
-        alert('ya está!!')
-        cambio = true;
-        $('#ok').click(function(){
-          window.location.href = '../view/profile.html';
-        })
-      }
-    } else {
-      // User is signed out.
-    }
-  });
+  //     if (pass1 && pass2 && pass3) {
+  //       alert('ya está!!')
+  //       cambio = true;
+  //       $('#ok').click(function(){
+  //         window.location.href = '../view/profile.html';
+  //       })
+  //     }
+  //   } else {
+  //     // User is signed out.
+  //   }
+  // });
 
 
 });
