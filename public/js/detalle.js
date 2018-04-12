@@ -22,9 +22,7 @@ function getNews2() {
 }
 function addNews2() {
   let data = JSON.parse(this.responseText);
-  console.log(data);
   let article = data.articles;
-  console.log(article);
   for (var i = 0; i < article.length; i++) {
     let title = article[i].title;
     let description = article[i].description;
@@ -74,7 +72,6 @@ function handleError1() {
   console.log('Se ha presentado un error');
 }
 function getNews3() {
-  console.log('hola clau y meli');
   const articleRequest = new XMLHttpRequest();
   articleRequest.open('GET', `https://newsapi.org/v2/everything?q=${localStorage.categorys}&sources=el-mundo&apiKey=5bc8597ff85946f48100561b36f359b6`);
   articleRequest.onload = addNews3;
@@ -83,9 +80,7 @@ function getNews3() {
 }
 function addNews3() {
   let data1 = JSON.parse(this.responseText);
-  console.log(data1);
   let article1 = data1.articles;
-  console.log(article1[0]);
   for (var i = 0; i < article1.length; i++) {
     let title1 = article1[i].title;
     let description1 = article1[i].description;
@@ -108,7 +103,6 @@ function addNews3() {
     $('#response-container').append(news1);
   }
   $('.arrow').on('click', function() {
-    console.log($(this).attr('id'));
     localStorage.idNoticia = $(this).attr('id');
     window.location.href = 'news.html';
   });

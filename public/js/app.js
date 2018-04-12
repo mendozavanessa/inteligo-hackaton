@@ -12,8 +12,6 @@ $(document).ready(function() {
         alert('Ingrese correo y contraseña valido ');
         var errorCode = error.code;
         var errorMessage = error.message;
-        console.log(errorCode);
-        console.log(errorMessage);
         // ...
       });
   });
@@ -23,7 +21,6 @@ $(document).ready(function() {
       if (user) {
         // User is signed in.
         appears();
-        console.log('usuario activo');
         // ...
       } else {
         // User is signed out.
@@ -44,7 +41,6 @@ $(document).ready(function() {
           var password2 = $('#password2').val('');
         })
         .catch(function(error) {
-          console.log(error);
         });
     });
   }

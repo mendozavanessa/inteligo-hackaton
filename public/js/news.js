@@ -20,7 +20,6 @@ $(document).ready(function() {
     console.log('Se ha presentado un error');
   }
   function getNews3() {
-    console.log('hola clau y meli');
     const articleRequest = new XMLHttpRequest();
     articleRequest.open('GET', `https://newsapi.org/v2/everything?q=${localStorage.categorys}&sources=el-mundo&apiKey=5bc8597ff85946f48100561b36f359b6`);
     articleRequest.onload = addNews3;
@@ -29,9 +28,7 @@ $(document).ready(function() {
   }
   function addNews3() {
     let data1 = JSON.parse(this.responseText);
-    console.log(data1);
     let article1 = data1.articles;
-    console.log(article1[0]);
     let title2 = article1[localStorage.idNoticia].title;
     let description2 = article1[localStorage.idNoticia].description;
     let imagenNews = article1[localStorage.idNoticia].urlToImage;
@@ -83,20 +80,19 @@ $(document).ready(function() {
   $('.postext').on('click', function () {
     var $content = $('#textarea1').val();
     var time=moment().format('LTS')
-    console.log(time);
     firebase.database().ref('coments').push({
       textpost: $content,
       time:time
     });
 
-
+    $('#textarea1').val('');
       firebase.auth().onAuthStateChanged(function (user) {
       if (user) { }
     })
   });
   var showComents = firebase.database().ref('coments');
   showComents.on('child_added', function(data) {
-    console.log(data.val().textpost);
+    // console.log(data.val().textpost);
       $('.content-text').prepend(`<div class="col s12 m8 offset-m2 l6 offset-l3">
         <div class="card-panel grey lighten-5 z-depth-1">
           <div class="row valign-wrapper">
