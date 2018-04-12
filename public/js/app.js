@@ -5,7 +5,7 @@ $(document).ready(function() {
     var password = $('#password').val();
     firebase.auth().signInWithEmailAndPassword(email, password)
       .then(function() {
-        $(location).attr('href', '../view/profile.html');
+        $(location).attr('href', '../public/view/profile.html');
         $('.perfil').attr('src', '../assets/images/foto1.jpg');
       })
       .catch(function(error) {
