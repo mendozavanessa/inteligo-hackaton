@@ -29,6 +29,7 @@ function addNews2() {
     let title = article[i].title;
     let description = article[i].description;
     let imagen = article[i].urlToImage;
+
     let news = `    
     <div class="row">
     <div class="col s12 m6">
@@ -43,26 +44,10 @@ function addNews2() {
         </div>
       </div>
     </div>
-  </div>`;
 
-    /* `<div class="row">
-    <div class="col s12 m7">
-    <div class="card">
- <div class="card-image waves-effect waves-block waves-light">
-   <img class="activator" src=${imagen}>
- </div>
- <div class="card-content">
-   <span class="card-title activator grey-text text-darken-4">${title}<i class="material-icons right">more_vert</i></span>
-   <p><a href="#">This is a link</a></p>
- </div>
- <div class="card-reveal">
-   <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-   <p>${description}</p>
- </div>
-</div>
-    </div>
-  </div>`;*/
-    $('#response-container').prepend(news);
+  </div>`
+  $('#response-container').prepend(news);
+
   }
 }
 
@@ -81,6 +66,7 @@ function getNews3() {
   articleRequest.onerror = handleError1;
   articleRequest.send();
 }
+
 function addNews3() {
   let data1 = JSON.parse(this.responseText);
   console.log(data1);
@@ -90,7 +76,10 @@ function addNews3() {
     let title1 = article1[i].title;
     let description1 = article1[i].description;
     let imagen1 = article1[i].urlToImage;
-    let news1 = ` <div class="row">
+
+    let date = article1[i].publishedAt;
+    let news1 =` <div class="row">
+
     <div class="col s12 m6">
       <div class="card">
         <div class="card-image">
@@ -99,6 +88,7 @@ function addNews3() {
         </div>
         <div class="card-content">
         <span class="card-title">${title1}</span>
+        <p>${date}</p>
         </div>
       </div>
     </div>
