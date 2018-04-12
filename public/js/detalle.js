@@ -29,7 +29,8 @@ function addNews2() {
     let title = article[i].title;
     let description = article[i].description;
     let imagen = article[i].urlToImage;
-    let news =`
+
+    let news = `    
     <div class="row">
     <div class="col s12 m6">
 
@@ -43,8 +44,10 @@ function addNews2() {
         </div>
       </div>
     </div>
+
   </div>`
   $('#response-container').prepend(news);
+
   }
 }
 
@@ -68,18 +71,20 @@ function addNews3() {
   let data1 = JSON.parse(this.responseText);
   console.log(data1);
   let article1 = data1.articles;
-  console.log(article1);
+  console.log(article1[0]);
   for (var i = 0; i < article1.length; i++) {
     let title1 = article1[i].title;
     let description1 = article1[i].description;
     let imagen1 = article1[i].urlToImage;
+
     let date = article1[i].publishedAt;
     let news1 =` <div class="row">
+
     <div class="col s12 m6">
       <div class="card">
         <div class="card-image">
           <img src=${imagen1}>
-          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">keyboard_arrow_right</i></a>
+          <a class="btn-floating halfway-fab waves-effect waves-light red arrow" id="${i}"><i class="material-icons">keyboard_arrow_right</i></a>
         </div>
         <div class="card-content">
         <span class="card-title">${title1}</span>
@@ -87,14 +92,19 @@ function addNews3() {
         </div>
       </div>
     </div>
-  </div>`
+  </div>`;
 
 
     $('#response-container').prepend(news1);
   }
+  $('.arrow').on('click', function() {
+    console.log($(this).attr('id'));
+    localStorage.idNoticia = $(this).attr('id');
+    window.location.href = 'news.html';
+  });
 }
 
-$('.postext').on('click', function() {
+/* $('.postext').on('click', function() {
   var $content = $('#textarea1').val();
   $('.content-text').append('<div class="col l10 offset-l1 posteando card flow-text s12">' + $content + '<br><br><span class="grey-text">Publicado a las :' + getTime() + '</span><br><a href="#!" class="secondary-content like"><i id="heart" class="material-icons">favorite_border</i></a></div>');
   $('#test4').append('<div class="col l10 offset-l1 posteando card flow-text s12">' + $content + '<br><br><span class="grey-text">Publicado a las :' + getTime() + '</span><br><a href="#!" class="secondary-content like"><i id="heart" class="material-icons">favorite_border</i></a></div>');
@@ -109,4 +119,5 @@ $('.postext').on('click', function() {
       });
     }
   });
-});
+}); */
+

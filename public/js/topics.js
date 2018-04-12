@@ -54,9 +54,9 @@ $(document).ready(function() {
     console.log('Se ha presentado un error');
   }
   function getNews3() {
-   console.log('hola clau y meli');
+    console.log('hola clau y meli');
     const articleRequest = new XMLHttpRequest();
-    articleRequest.open('GET', `https://newsapi.org/v2/everything?q=golf&sources=cnn-es&apiKey=5bc8597ff85946f48100561b36f359b6`);
+    articleRequest.open('GET', 'https://newsapi.org/v2/everything?q=golf&sources=cnn-es&apiKey=5bc8597ff85946f48100561b36f359b6');
     articleRequest.onload = addNews3;
     articleRequest.onerror = handleError1;
     articleRequest.send();
