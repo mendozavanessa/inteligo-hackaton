@@ -39,9 +39,14 @@ $(document).ready(function() {
   }
   console.log(arrVacioCategory);
   var mappedItemsCategory = arrVacioCategory.map(function(element, index) {
-    var replacementTwo = $('<li class="circle-topics col s5">').html('<img src=' + data['Gustos y Preferencias'].Topico[localStorage.topics][index].img + '> ' + element);
+    var replacementTwo = $('<li class="circle-topics click-category col s5" id="' + element + '" >').html('<img src=' + data['Gustos y Preferencias'].Topico[localStorage.topics][index].img + '> ' + element);
     console.log(index);
     return replacementTwo;
   });
   $('.list-category').append(mappedItemsCategory);
+  $('.click-category').on('click', function(e) {
+    console.log($(this).attr('id'));
+    var categorys = $(this).attr('id');
+    localStorage.categorys = categorys;
+});
 });
