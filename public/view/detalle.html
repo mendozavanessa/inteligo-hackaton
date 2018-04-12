@@ -75,7 +75,7 @@
     <h5>El ‘efecto Tiger’ sacude al golf</h5>
     <div class="detalle-icons">
         <i class="material-icons">favorite_border</i>
-        <i class="material-icons">comment</i>
+        <i class="material-icons"></i>
     </div>
     <div class="content-detalle">
       <p>El número 105 del mundo en la clasificación del golf es el tercer favorito para ganar el Masters de Augusta. El número
@@ -85,10 +85,31 @@
         la semana pasada, creció un 56% de audiencia respecto al curso pasado y un 72% al de hace dos, y fue la primera ronda
         de un torneo más vista desde 2012.</p>
     </div>
+    <div class='input-field col s12'>
+        <textarea id='textarea1' class='materialize-textarea flow-text' data-length='120'></textarea>
+        <label for='textarea1 flow-text'>Comentario..</label>
+        <a class='waves-effect waves-light btn postext'>Post</a>
+    </div>
+    <div class="content-text">
+
+    </div>
   </div>
 
   <script src="../vendors/jquery/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
   <script src="../vendors/materialize/js/materialize.min.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyByPzXvMEw34UbhPkEKSuAO3TTssAlPApc",
+      authDomain: "inteligo-reto.firebaseapp.com",
+      databaseURL: "https://inteligo-reto.firebaseio.com",
+      projectId: "inteligo-reto",
+      storageBucket: "inteligo-reto.appspot.com",
+      messagingSenderId: "615168773810"
+    };
+    firebase.initializeApp(config);
+  </script>
   <script src="../js/detalle.js"></script>
 </body>
 
