@@ -8,6 +8,8 @@
   <title>Inteligo</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/jquery-comments.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../css/topics.css">
   <link rel="stylesheet" href="../css/profile.css">
 </head>
@@ -83,16 +85,38 @@
         <i class="material-icons">local_grocery_store</i>Purchases</a>
     </li>
   </ul>
+  <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
   <section class="news-container">
   </section>
-  <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="5"></div>
+  <div id="comments-container">
 
+    </div>
+  <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="5"></div>
+  <div class="fb-save" data-uri="https://www.instagram.com/facebook/" data-size="large"></div>
   <script src="../vendors/jquery/jquery-3.2.1.slim.min.js"></script>
   <script src="../vendors/materialize/js/materialize.min.js"></script>
   <script src="../js/data.js"></script>
   <script src="../js/topics.js"></script>
   <script src="../js/detalle.js"></script>
   <script src="../js/news.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery-comments.js"></script>
+<script>
+  $('#comments-container').comments({
+    profilePictureURL: 'https://app.viima.com/static/media/user_profiles/user-icon.png',
+    getComments: function(success, error) {
+        var commentsArray = [{
+            id: 1,
+            created: '2015-10-01',
+            content: 'Inteligo te da la bienvenida',
+            fullname: 'INTELIGO',
+            upvote_count: 2,
+            user_has_upvoted: false
+        }];
+        success(commentsArray);
+    }
+});
+</script>
 </body>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
