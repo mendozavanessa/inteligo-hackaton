@@ -1,6 +1,21 @@
 $(document).ready(function () {
+  var database = firebase.database();
   $('.sidenav').sidenav();
-  console.log(data['Gustos y Preferencias'].Topico);
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      $('#email-profile').text(user.email);
+      var showPost = firebase.database().ref('usuarios');
+      showPost.on('child_added', function(data) {
+        if (data.val().uid === user.uid) {
+          $('#name-profile').text(data.val().name);
+        }
+      });
+    } else {
+     
+    }
+  });
+  
+  console.log(data['Gustos y Preferencias']);
   console.log(Object.keys(data['Gustos y Preferencias'].Topico));
   var arrTopics = Object.keys(data['Gustos y Preferencias'].Topico);
   var arrImgTopics = [

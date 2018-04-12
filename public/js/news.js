@@ -57,6 +57,11 @@ $(document).ready(function() {
   </div>`;*/
     $('.news-container').append(news2);
   };
+  $(function() {
+    $('#rateYo').rateYo({
+      rating: 3.6
+    });
+  });
 
 
   $('.postext').on('click', function () {
