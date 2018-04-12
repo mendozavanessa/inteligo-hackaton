@@ -29,7 +29,23 @@ function addNews2() {
     let title = article[i].title;
     let description = article[i].description;
     let imagen = article[i].urlToImage;
-    let news = `<div class="row">
+    let news = `    
+    <div class="row">
+    <div class="col s12 m6">
+
+      <div class="card">
+        <div class="card-image">
+          <img src=${imagen}>
+          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">keyboard_arrow_right</i></a>
+        </div>
+        <div class="card-content">
+          <span class="card-title">${title}</span>
+        </div>
+      </div>
+    </div>
+  </div>`;
+
+    /* `<div class="row">
     <div class="col s12 m7">
     <div class="card">
  <div class="card-image waves-effect waves-block waves-light">
@@ -45,7 +61,7 @@ function addNews2() {
  </div>
 </div>
     </div>
-  </div>`;
+  </div>`;*/
     $('#response-container').prepend(news);
   }
 }
@@ -74,24 +90,20 @@ function addNews3() {
     let title1 = article1[i].title;
     let description1 = article1[i].description;
     let imagen1 = article1[i].urlToImage;
-    console.log(i);
-    let news1 = `<div class="row">
-  <div class="col s12 m7">
-  <div class="card">
-<div class="card-image waves-effect waves-block waves-light">
- <img class="activator" src=${imagen1}>
-</div>
-<div class="card-content">
- <span class="card-title activator grey-text text-darken-4">${title1}<i class="material-icons right">more_vert</i></span>
- <p><a class="arrow" id="${i}">ir a noticia</a></p>
-</div>
-<div class="card-reveal">
- <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
- <p>${description1}</p>
-</div>
-</div>
-  </div>
-</div>`;
+    let news1 = ` <div class="row">
+    <div class="col s12 m6">
+      <div class="card">
+        <div class="card-image">
+          <img src=${imagen1}>
+          <a class="btn-floating halfway-fab waves-effect waves-light red arrow" id="${i}"><i class="material-icons">keyboard_arrow_right</i></a>
+        </div>
+        <div class="card-content">
+        <span class="card-title">${title1}</span>
+        </div>
+      </div>
+    </div>
+  </div>`;
+
 
     $('#response-container').prepend(news1);
   }
